@@ -25,13 +25,13 @@ jobs:
         id: metadata
         with:
           images: |
-            ghcr.io/Renaud11232/caddy-cloudflare
+            ghcr.io/Renaud11232/caddy
           tags: |
             type=semver,pattern={{version}},value=v${{ steps.version.outputs.version }}
             type=semver,pattern={{major}}.{{minor}},value=v${{ steps.version.outputs.version }}
             type=semver,pattern={{major}},value=v${{ steps.version.outputs.version }}
           labels: |
-            org.opencontainers.image.title=caddy-cloudflare
+            org.opencontainers.image.title=caddy
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Setup Docker buildx
