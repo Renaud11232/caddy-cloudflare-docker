@@ -25,7 +25,7 @@ jobs:
         id: metadata
         with:
           images: |
-            ghcr.io/Renaud11232/caddy
+            ghcr.io/Renaud11232/caddy-cloudflare
           tags: |
             type=semver,pattern={{version}},value=v${{ steps.version.outputs.version }}
             type=semver,pattern={{major}}.{{minor}},value=v${{ steps.version.outputs.version }}
