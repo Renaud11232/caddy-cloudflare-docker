@@ -16,7 +16,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Get Caddy version from Dockerfile
         id: version
         run:  echo "version=$(grep -Eo 'caddy:[0-9]+\.[0-9]+\.[0-9]+$' Dockerfile | cut -d ':' -f2)" | tee -a $GITHUB_OUTPUT
