@@ -21,7 +21,7 @@ jobs:
         id: version
         run:  echo "version=$(grep -Eo 'caddy:[0-9]+\.[0-9]+\.[0-9]+$' Dockerfile | cut -d ':' -f2)" | tee -a $GITHUB_OUTPUT
       - name: Generate Docker metadata
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         id: metadata
         with:
           images: |
